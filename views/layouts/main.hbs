@@ -3,57 +3,61 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>BookingUni</title>
+    <title>All-Ads Page</title>
+
+    <!-- Do not forget to change the path to the css file -->
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-    <div id="container">
-            {{#if error}}
-            <div class="notification errorBox">
-                {{!-- {{#each errors}} --}}
-                <span>{{error}}</span>
-                {{!-- {{/each}} --}}
-            </div>
-            {{/if}}
-        {{#if user}}
-        {{!-- {{#if error}}
-        <div class="error">
+
+    <div class="box">
+
+        {{#if error}}
+        <div class="error-box">
             <p>{{error}}</p>
         </div>
-        {{/if}} --}}
-        {{!-- <div>
-            <div class="notification loadingBox">
-                Loading …
-            </div>
-            <div class="notification infoBox">
-                <span>Info</span>
-            </div> --}}
-
-        </div>
-        <nav>
-            <div class="left-container">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/booking/create">Add +</a></li>
-                </ul>
-            </div>
-            <div class="right-container">
-                <a href="/profile" class="log-out">{{user.username}}</a>
-                <a href="/auth/logout" class="log-out">Logout</a>
-            </div>
-        </nav>
-        {{else}}
-        <nav>
-            <div class="left-container">
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/auth/login">Login</a></li>
-                    <li><a href="/auth/register">Register</a></li>
-                </ul>
-            </div>
-        </nav>
         {{/if}}
+
+
+        <header class="header">
+            <article class="header-logo">
+                <!-- Do not forget to change the path to the image -->
+                <img src="/img/logo.png">
+            </article>
+            <nav class="header-nav">
+                <ul class="header-nav-list">
+
+                    <li class="header-nav-list-item active">
+                        <a href="/" class="header-nav-list-item-link active">Home Page</a>
+                    </li>
+                    <li class="header-nav-list-item">
+                        <a href="/ads/catalog" class="header-nav-list-item-link">All ads</a>
+                    </li>
+
+                    {{#if user}}
+                    <!-- Logged users -->
+                    <li class="header-nav-list-item">
+                        <a href="/ads/create" class="header-nav-list-item-link">Create Ad</a>
+                    </li>
+                    <li class="header-nav-list-item">
+                        <a href="/ads/search" class="header-nav-list-item-link">Search</a>
+                    </li>
+                    <li class="header-nav-list-item">
+                        <a href="/auth/logout" class="header-nav-list-item-link">Logout</a>
+                    </li>
+                    {{else}}
+                    <!-- Guest users -->
+                    <li class="header-nav-list-item">
+                        <a href="/auth/register" class="header-nav-list-item-link">Register</a>
+                    </li>
+                    <li class="header-nav-list-item">
+                        <a href="/auth/login" class="header-nav-list-item-link">Login</a>
+                    </li>
+                    {{/if}}
+                </ul>
+            </nav>
+        </header>
 
 
         {{{body}}}
@@ -61,7 +65,9 @@
 
 
 
-        <footer>@SoftUni - JS Back-end - BookingUni 2020</footer>
+        <footer>
+            <p>©Js Back-End Final Exam 2022</p>
+        </footer>
     </div>
 
 </body>
