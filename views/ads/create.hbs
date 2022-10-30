@@ -1,0 +1,54 @@
+{{!--
+
+<section id="viewAddhotel">
+    <h2>Add new hotel</h2>
+    <form method="post" id="formAddhotel">
+        <label for="hotel">Hotel name:</label>
+        <input type="text" id="hotel" name="hotel" placeholder="Hotel name" value="{{hotel.hotel}}">
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" placeholder="City" value="{{hotel.city}}">
+        <label for="free-rooms">Free rooms:</label>
+        <input type="number" id="freeRooms" name="freeRooms" placeholder="Free rooms" value="{{hotel.freeRooms}}">
+        <label for="imgUrl">Image:</label>
+        <input type="text" id="imgUrl" name="imgUrl" placeholder="https://" value="{{hotel.imgUrl}}">
+
+        <input type="submit" class="create" value="Add">
+    </form>
+</section>
+--}}
+
+
+<main>
+
+    <section id="create-page">
+
+        <article class="create-page-container">
+            <form action="#" method="post" class="create-page-form">
+                <h2>Create an ad</h2>
+
+                <label for="headline">Headline:</label>
+                <input type="text" id="headline" placeholder="Front-End Developer with React" name="headline" value="{{reklama.headline}}">
+
+                <label for="location">Location:</label>
+                <input type="text" id="location" placeholder="Ruse, Bulgaria" name="location" value="{{reklama.location}}">
+
+                <label for="company-name">Company name:</label>
+                <input type="text" id="company-name" placeholder="Digital Solutions" name="companyName" value="{{reklama.companyName}}">
+
+                <label for="company-description">Company description:</label>
+                <input type="text" id="company-description" placeholder="We are developing a web application" name="description"
+                    value="{{reklama.description}}">
+
+                <article class="create-page-button">
+                    <button class="btn-create">Create</button>
+                </article>
+            </form>
+
+            <article class="create-page-image">
+                <!-- Do not forget to change the path to the image -->
+                <img src="/img/job.png" alt="image">
+            </article>
+        </article>
+
+    </section>
+</main>

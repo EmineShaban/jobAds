@@ -13,3 +13,5 @@ exports.update = (AdsID, AdsData) => Ads.updateOne({ _id: AdsID }, { $set: AdsDa
 
 // exports.getAdsByID = (userId) => Ads.find({AdssHistory: userId})
 exports.updateRooms = (AdsID, AdsData) => Ads.updateOne({ _id: AdsID }, { $set: AdsData }, { runValidators: true })
+exports.applide = (userId, tripID) => Ads.updateOne({_id: userId}, {$push: {usersApplied: tripID}})
+exports.getOne2 = (id) =>  Ads.findById(id).populate("usersApplied")

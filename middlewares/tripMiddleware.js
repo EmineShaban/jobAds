@@ -1,20 +1,20 @@
-const bookingServices = require('../services/bookingServices')
+const adsServices = require('../services/adsServices')
 
 
 exports.preloadTrip = async (req, res, next) => {
-    const hotel = await bookingServices.getOne(req.params.hotelID).lean()
+    const reklama = await adsServices.getOne(req.params.reklamaID).lean()
 
-    req.hotel = hotel
+    req.reklama = reklama
 
     next()
 }
 
 exports.isTripAuthor = async (req, res, next) => {
-    const hotel = await bookingServices.getOne(req.params.hotelID).lean()
+    const reklama = await adsServices.getOne(req.params.reklamaID).lean()
     // console.log(req.user._id)
-    // console.log(hotel)
-    if (hotel?.owner != req.user._id) {
-        return next({ message: 'You are not authorized', status: 401 })
+    // console.log(reklama)
+    if (reklama?.owner != req.user._id) {
+        return res.redirect('/')
     }
     next()
 }

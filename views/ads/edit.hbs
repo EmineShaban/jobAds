@@ -1,0 +1,49 @@
+{{!-- 
+        <section id="viewAddhotel">
+            <h2>Edit existing hotel</h2>
+            <form method="post" id="formAddhotel">
+                <label for="hotel">Hotel name:</label>
+                <input type="text" id="hotel" name="hotel" value="{{hotel}}">
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" value="{{city}}">
+                <label for="free-rooms">Free rooms:</label>
+                <input type="number" id="free-rooms" name="free-rooms" value="{{freeRooms}}">
+                <label for="imgUrl">Image:</label>
+                <input type="text" id="imgUrl" name="imgUrl" value="{{imgUrl}}">
+
+                <input type="submit" class="create" value="Add">
+            </form>
+        </section> --}}
+    <main>
+
+            <section id="edit-page">
+
+                <article class="edit-page-container">
+                    <form action="#" method="post" class="edit-page-form">
+                        <h2>Edit an ad</h2>
+
+                        <label for="headline">Headline:</label>
+                        <input type="text" id="headline" name="headline" value="{{headline}}">
+
+                        <label for="location">Location:</label>
+                        <input type="text" id="location" name="location" value="{{location}}">
+
+                        <label for="company-name">Company name:</label>
+                        <input type="text" id="company-name" name="companyName" value="{{companyName}}">
+
+                        <label for="company-description">Company description:</label>
+                        <input type="text" id="company-description" name="description" value="{{description}}">
+
+                        <article class="edit-page-button">
+                            <button class="btn-edit-ads">Edit</button>
+                        </article>
+                    </form>
+
+                    <article class="edit-page-image">
+                        <!-- Do not forget to change the path to the image -->
+                        <img src="/img/job.png" alt="image">
+                    </article>
+                </article>
+
+            </section>
+        </main>
